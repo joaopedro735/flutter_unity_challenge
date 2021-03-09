@@ -16,13 +16,6 @@ public class Manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //string json = @"{""temperature"":9,""weatherCondition"":""Clouds""}";
-        //Debug.Log(json);
-
-        //var text = Weather.ParseJson(json);
-        //temperatureText.text = text.GetTemperatureWithUnit();
-        //Debug.Log(text.temperature + " " + text.weatherCondition + " " + text.WeatherConditionToEnum());
-        // SpawnRain(30);
     }
 
 
@@ -49,7 +42,7 @@ public class Manager : MonoBehaviour
         return randomPos;
     }
 
-    public void SetActiveElement(string data)
+    public void Setup(string data)
     {
         FlutterUnityPlugin.Message message = FlutterUnityPlugin.Messages.Receive(data);
 
