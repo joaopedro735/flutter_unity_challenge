@@ -23,4 +23,10 @@ class Weather {
       weatherCondition: enumFromString(json['weather'][0]['main'], WeatherCondition.values) ,
     );
   }
+
+  Map<String, dynamic> toJson() =>
+      {
+        'temperature': temperature,
+        'weatherCondition': enumToString(weatherCondition),
+      };
 }
