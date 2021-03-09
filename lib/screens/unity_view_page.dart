@@ -20,7 +20,7 @@ class _UnityViewPageState extends State<UnityViewPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Test Unity'),
+        title: Text('Unity'),
       ),
       body: UnityView(
         onCreated: onUnityViewCreated,
@@ -31,6 +31,6 @@ class _UnityViewPageState extends State<UnityViewPage> {
   void onUnityViewCreated(UnityViewController controller) {
     unityViewController = controller;
 
-    unityViewController.send('Manager', "SetActiveElement", jsonEncode(widget.weather.toJson()));
+    unityViewController.send('Manager', "Setup", jsonEncode(widget.weather.toJson()));
   }
 }

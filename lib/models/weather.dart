@@ -27,6 +27,6 @@ class Weather {
   Map<String, dynamic> toJson() =>
       {
         'temperature': temperature,
-        'weatherCondition': enumToString(weatherCondition),
+        'weatherCondition': weatherCondition != null ? enumToString(weatherCondition) : null,
       };
 }
